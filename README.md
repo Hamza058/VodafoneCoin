@@ -1,1 +1,1 @@
-# VodafonCoin
+# VodafoneCoin
