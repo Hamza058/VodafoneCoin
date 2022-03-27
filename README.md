@@ -1,4 +1,4 @@
-# VodafoneCoin
+# Giris Ekranı
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
