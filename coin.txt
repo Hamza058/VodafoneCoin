@@ -1,0 +1,61 @@
+//Coin Linki
+https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC40OwoKaW1wb3J0ICJAb3BlbnplcHBlbGluL2NvbnRyYWN0c0A0LjUuMC90b2tlbi9FUkMyMC9FUkMyMC5zb2wiOwppbXBvcnQgIkBvcGVuemVwcGVsaW4vY29udHJhY3RzQDQuNS4wL3Rva2VuL0VSQzIwL2V4dGVuc2lvbnMvRVJDMjBCdXJuYWJsZS5zb2wiOwppbXBvcnQgIkBvcGVuemVwcGVsaW4vY29udHJhY3RzQDQuNS4wL2FjY2Vzcy9Pd25hYmxlLnNvbCI7CmltcG9ydCAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHNANC41LjAvdG9rZW4vRVJDMjAvZXh0ZW5zaW9ucy9kcmFmdC1FUkMyMFBlcm1pdC5zb2wiOwppbXBvcnQgIkBvcGVuemVwcGVsaW4vY29udHJhY3RzQDQuNS4wL3Rva2VuL0VSQzIwL2V4dGVuc2lvbnMvRVJDMjBWb3Rlcy5zb2wiOwoKLy8vIEBjdXN0b206c2VjdXJpdHktY29udGFjdCAxMGxhcmRhbnVyQGdtYWlsLmNvbSAwNTM1MjU0MTUyMApjb250cmFjdCBWb2RhZm9uZUNvaW4gaXMgRVJDMjAsIEVSQzIwQnVybmFibGUsIE93bmFibGUsIEVSQzIwUGVybWl0LCBFUkMyMFZvdGVzIHsKICAgIGNvbnN0cnVjdG9yKCkgRVJDMjAoIlZvZGFmb25lQ29pbiIsICJWREZOIikgRVJDMjBQZXJtaXQoIlZvZGFmb25lQ29pbiIpIHsKICAgICAgICBfbWludChtc2cuc2VuZGVyLCAxMDAwMDAwICogMTAgKiogZGVjaW1hbHMoKSk7CiAgICB9CgogICAgZnVuY3Rpb24gbWludChhZGRyZXNzIHRvLCB1aW50MjU2IGFtb3VudCkgcHVibGljIG9ubHlPd25lciB7CiAgICAgICAgX21pbnQodG8sIGFtb3VudCk7CiAgICB9CgogICAgLy8gVGhlIGZvbGxvd2luZyBmdW5jdGlvbnMgYXJlIG92ZXJyaWRlcyByZXF1aXJlZCBieSBTb2xpZGl0eS4KCiAgICBmdW5jdGlvbiBfYWZ0ZXJUb2tlblRyYW5zZmVyKGFkZHJlc3MgZnJvbSwgYWRkcmVzcyB0bywgdWludDI1NiBhbW91bnQpCiAgICAgICAgaW50ZXJuYWwKICAgICAgICBvdmVycmlkZShFUkMyMCwgRVJDMjBWb3RlcykKICAgIHsKICAgICAgICBzdXBlci5fYWZ0ZXJUb2tlblRyYW5zZmVyKGZyb20sIHRvLCBhbW91bnQpOwogICAgfQoKICAgIGZ1bmN0aW9uIF9taW50KGFkZHJlc3MgdG8sIHVpbnQyNTYgYW1vdW50KQogICAgICAgIGludGVybmFsCiAgICAgICAgb3ZlcnJpZGUoRVJDMjAsIEVSQzIwVm90ZXMpCiAgICB7CiAgICAgICAgc3VwZXIuX21pbnQodG8sIGFtb3VudCk7CiAgICB9CgogICAgZnVuY3Rpb24gX2J1cm4oYWRkcmVzcyBhY2NvdW50LCB1aW50MjU2IGFtb3VudCkKICAgICAgICBpbnRlcm5hbAogICAgICAgIG92ZXJyaWRlKEVSQzIwLCBFUkMyMFZvdGVzKQogICAgewogICAgICAgIHN1cGVyLl9idXJuKGFjY291bnQsIGFtb3VudCk7CiAgICB9Cn0K&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.7+commit.e28d00a7.js
+
+
+//Coin Kodlarý
+
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.7;
+
+import "@openzeppelin/contracts@4.5.0/token/ERC20/ERC20.sol";
+// ERC20 formatýnda coini solidity uzantýsýyla ekledik.
+
+import "@openzeppelin/contracts@4.5.0/token/ERC20/extensions/ERC20Burnable.sol";
+// Coinin arzý Vodafone'un isteði doðrultusunda azaltýlabilir olduðunu belirttik.
+
+import "@openzeppelin/contracts@4.5.0/access/Ownable.sol";
+// Coinin arzý Vodafone'un isteði doðrultusunda arttýrýlabilir olduðunu belirttik.
+
+import "@openzeppelin/contracts@4.5.0/token/ERC20/extensions/draft-ERC20Permit.sol";
+import "@openzeppelin/contracts@4.5.0/token/ERC20/extensions/ERC20Votes.sol";
+// Coin Vodafone'un isteði doðrultusunda oylamalarda kullanýlabilir olduðunu belirttik.
+
+
+/// @custom:güvenlik ve iletiþim için 10lardanur@gmail.com   05352541520
+
+
+contract VodafoneCoin is ERC20, ERC20Burnable, Ownable, ERC20Permit, ERC20Votes {
+    constructor() ERC20("VodafoneCoin", "VDFN") ERC20Permit("VodafoneCoin") {
+        _mint(msg.sender, 1000000 * 10 ** decimals());
+    }
+// ERC20 standardýnda yaratýlan VodafoneCoin, sembolü VDFN'dir.
+    function mint(address to, uint256 amount) public onlyOwner {
+        _mint(to, amount);
+    }
+// Coinin yaratýlma aþamasý 
+    function _afterTokenTransfer(address from, address to, uint256 amount)
+        internal
+        override(ERC20, ERC20Votes)
+    {
+        super._afterTokenTransfer(from, to, amount);
+    }
+// Coinin oylamalarda kullanýlýrken geçtiði transfer aþamasý
+    function _mint(address to, uint256 amount)
+        internal
+        override(ERC20, ERC20Votes)
+    {
+        super._mint(to, amount);
+    }
+
+// Coinin arz artma prensibi
+
+    function _burn(address account, uint256 amount)
+        internal
+        override(ERC20, ERC20Votes)
+    {
+        super._burn(account, amount);
+    }
+}
+
+// Coinin yakýlma prensibi
